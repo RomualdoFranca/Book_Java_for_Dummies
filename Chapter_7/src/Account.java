@@ -10,6 +10,13 @@ public class Account {
         System.out.println("Client name: " + name);
         System.out.println("Address: " + address);
         System.out.println("Balance: " + balance);
+//        System.out.println("Interest per month: R$" + getInterest());
 
     }
+
+    public double getInterest(double percentageRate) {
+        return balance * percentageRate / 100;
+    }
+
+
 }
