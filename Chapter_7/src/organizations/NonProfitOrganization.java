@@ -34,8 +34,8 @@ public class NonProfitOrganization {
         revenue = scanner.nextDouble();
 
         out.println("Organization name\n" + organizationName);
-        out.printf("Organization monthly revenue\nR$%.2f\n", revenue);
-        out.printf("Monthly tax amount\nR$%.2f\n", getTax());
+        out.printf("Organization monthly revenue\nR$%5.2f\n", revenue);
+        out.printf("Monthly tax amount\nR$%2.2f\n", getTax());
 
     }
 }
