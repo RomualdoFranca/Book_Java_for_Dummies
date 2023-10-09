@@ -12,7 +12,9 @@ public class DoPayroll {
         * O numero da variavel local do 'for' foi definido levando em conta a quantidade de informacoes do arquivo
         * .txt
         * A quantidade de vezes que o metodo pode ser chamado dever ser IGUAL OU MENOR  que a quantidade de informacoes
-        * contidas no arqui e NUNCA MAIOR*/
+        * contidas no arqui e NUNCA MAIOR
+        *
+        *Cada vez que o metodo payOneEmployee é chamado, um novo objeto é criado*/
         for (int empNum = 1; empNum <= 3; empNum++){
             payOneEmployee(diskScanner);
         }
