@@ -1,14 +1,18 @@
 package AccessorMethods;
 import static java.lang.System.out;
-
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 
 public class UseAccount {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+
+        PrintStream accountData = new PrintStream("accountDataFile.txt");
 
         Account myAccount = new Account();
         Account yourAccount = new Account();
 
-        myAccount.setName("");
+
+        myAccount.setName("Romualdo");
         myAccount.setAddress("Rua das casas, N° das portas");
         myAccount.setBalance(2000.00);
 
