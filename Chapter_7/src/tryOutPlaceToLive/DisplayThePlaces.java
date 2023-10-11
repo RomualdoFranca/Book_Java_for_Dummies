@@ -9,24 +9,47 @@ public class DisplayThePlaces {
 
         Scanner scanner = new Scanner(System.in);
 
-        PlaceToLive anPlace = new PlaceToLive();
-        out.println("Informe o tamanho da área: ");
-        anPlace.setSizeArea(scanner.nextDouble());
-        out.println(anPlace.getSizeArea());
-        double costSquareMeter =  calculateCost(anPlace.getSizeArea(), 10000);
-//        out.printf("Cost of square meters: %.2f ", costEsquareMeter);
-        out.println("Cost of square meters:" + costSquareMeter);
+        PlaceToLive aPlace = new PlaceToLive();
+
+        out.println("Enter the size of the area: ");
+        aPlace.setSizeArea(scanner.nextInt());
+
+        out.println("Enter the number of bedrooms");
+        aPlace.setNumberBedrooms(scanner.nextInt());
+
+        out.println("Provide the address");
+        aPlace.setAddress(scanner.next());
+
+        PlaceToLive resort = new PlaceToLive();
+
+        resort.setAddress("Av. Boa Viagem");
+        resort.setSizeArea(150);
+        resort.setNumberBedrooms(10);
+
+        out.println("Please provide the cost of living in this location");
+        double costOfLiving = scanner.nextDouble();
+
+        calculateCostSquareMeter(costOfLiving ,resort.getSizeArea());
+
+//        double costBedroom =  calculateCostSquareMeter();
 
 
     }
-    static double calculateCost(double sizeArea, double costSquareMeter) {
-
-//        costSquareMeter =  10.000; // valor do metro quadrado
-        return sizeArea * costSquareMeter;
+    static double calculateCostSquareMeter(double costOfLiving, int sizeArea) {
+//        costOfLiving =  10.000; // valor do metro quadrado
+        return costOfLiving / sizeArea;
 
     }
-
-
-
 
 }
+
+
+//        out.println("Enter the size of the area: ");
+//        infoPlace.setSizeArea(scanner.nextDouble());
+//
+//
+//        out.println("Enter the number of bedrooms");
+//        infoPlace.setNumberBedrooms(scanner.nextInt());
+//
+//        out.println("Provide the address");
+//        infoPlace.setAddress(scanner.nextLine());
